@@ -3,7 +3,10 @@
     <img alt="Vue logo" src="./assets/logo.png"> {{sumprototal}} 
 
     {{selectedProds}}
-
+<div id="equiplist">
+    <div class="tab-content py-3" id="myTabContent" :class="[{ 'kpformat': isActive('all-cat') }]">
+      <div class="tab-pane" :class="[{ 'active show': isActive('sortcat') }, { 'active show': isActive('all-cat') }]" id="sortcat">
+        <h3 class="titlecategory">Оборудование для сортировки</h3>
     <!--Добавляем конвейер-->
 <div id="slidecheckblock" v-for="prod in konv1"
            :key="prod.name"
@@ -558,6 +561,10 @@
       </div> 
     </div>
   </div>
+  </div> 
+  </div>
+</div>
+
 </template>
 
 <script>
@@ -4134,5 +4141,113 @@ selectedkonv3opt(prod) {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.totalpriceblock{
+   position: sticky;
+   top: 70px;
+    width: 100%;
+    height: 100px;
+    background-color: #f6f6f6;
+    border: 1px solid #F7761F;
+    color: #444;
+    box-shadow: 0 4px 30px rgba(50,50,66,.5);
+    border-radius: 4px;
+    padding: 10px 10px 5px;
+z-index:999;
+}
+.totalpriceblock p{
+    font-weight: bold;
+}
+
+.totalpriceblock_link{
+text-align:right;
+margin-top: -10px;
+font-family: 'Exo 2', sans-serif;
+font-size: 14px;
+color: #f7761f;
+}
+
+.confelemblock{
+    border: 1px solid #f6f6f6;
+    background: #FFF;
+    padding: 0px 5px 25px;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0 4px 30px rgba(50,50,66,.12);
+    border-radius: 4px;
+}
+
+#right-block{
+    min-height: 1700px;
+}
+
+.addequip{
+    float: right;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    color: #f7761f;
+    border-bottom: 1px dashed #f7761f;
+}
+
+.dopelemblock{
+   position: sticky;
+   top: 185px;
+    background-color: #f6f6f6;
+    padding: 5px 10px 25px;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0 4px 30px rgba(50,50,66,.30);
+    border-radius: 4px;
+z-index:99;
+}
+
+.dopelemblock p{
+    font-weight: 700;
+}
+
+.dopelemblock label{
+    font-weight: 300;
+}
+
+.selectstyle{
+    height: 40px;
+    max-width: 348px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    padding: 5px 15px;
+    background: #fff;
+    color: #1a3b5d;
+}
+
+.block-equip-line-img {
+  width: 200px;
+  margin: 10px 10px 0 10px;
+}
+
+.dispnone{
+    display: none !important;
+  }
+.totalpriceblock_info{
+
+position: absolute;
+top: 30px;
+right: 60px;
+line-height:1;
+font-family: 'Exo 2', sans-serif;
+font-size: 13px;
+color: #7c7c7c;
+padding: 1px 2px 1px 5px;
+}
+
+.totalpriceblock_info i{
+float:left;
+font-size:38px;
+margin: 5px 2px 0 0;
+color: #F7761F;
 }
 </style>
