@@ -1795,8 +1795,391 @@
       </div>  
   </div>
       </div>
+     <div class="tab-pane" :class="[{ 'active show': isActive('mojki-cat') }, { 'active show': isActive('all-cat') }]" id="mojki-cat">
+        <h3 class="titlecategory">Моечное оборудование</h3>
 
+  <div id="slidecheckblock" v-for="prod in frikcmojkaperegruz"
+           :key="prod.name"
+          :class="prod.class"
+          >
       
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedfrikcmojkaperegruz(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Фрикционная мойка (с функцией перегрузки)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/830/160_160_1/8303a5d2771ccdbb6fb9723d31846495.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Фрикционная мойка (с функцией перегрузки)</h3>
+          <div v-for="prod in frikcmojkaperegruzopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedfrikcmojkaperegruzopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumfrikcmojkaperegruz }}р.</span></div> 
+      </div>  
+  </div>
+
+
+
+  <div id="slidecheckblock" v-for="prod in frikcmojkaperegruzgilza"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedfrikcmojkaperegruzgilza(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Фрикционная мойка с перфорированной гильзой (с функцией перегрузки)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/0b7/160_160_1/0b7b352f2dc5b49a89b6207ac8737a31.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Фрикционная мойка с перфорированной гильзой (с функцией перегрузки)</h3>
+          <div v-for="prod in frikcmojkaperegruzgilzaopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedfrikcmojkaperegruzgilzaopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>            
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumfrikcmojkaperegruzgilza }}р.</span></div> 
+      </div>  
+  </div>
+
+
+
+
+  <div id="slidecheckblock" v-for="prod in otgimfrikс"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikс(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжим фрикционный (барабанного типа, с одной центрифугой)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/8c8/160_160_1/8c8d597529fd8ce8686051bdd591d07e.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Отжим фрикционный (барабанного типа, с одной центрифугой)</h3>
+          <div v-for="prod in otgimfrikсopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>         
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotgimfrikс }}р.</span></div>    
+      </div>  
+  </div>
+
+
+<div id="slidecheckblock" v-for="prod in otgimfrikсfom500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсfom500(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжим фрикционный (барабанного типа, с тремя центрифугами) Модель-FDM-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/be9/160_160_1/be919bae46d4552e6a3b3a5174f51c59.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Отжим фрикционный (барабанного типа, с тремя центрифугами) Модель-FDM-500</h3>
+          <div v-for="prod in otgimfrikсfom500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсfom500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>       
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotgimfrikсfom500 }}р.</span></div>   
+      </div>  
+  </div>
+
+  <div id="slidecheckblock" v-for="prod in otgimfrikсfom1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсfom1000(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжим фрикционный (барабанного типа, с тремя центрифугами) Модель-FDM-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/be9/160_160_1/be919bae46d4552e6a3b3a5174f51c59.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Отжим фрикционный (барабанного типа, с тремя центрифугами) Модель-FDM-1000</h3>
+          <div v-for="prod in otgimfrikсfom1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсfom1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>        
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotgimfrikсfom1000 }}р.</span></div>   
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in mojkafrikсrfw500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw500(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Мойка фрикционная (роторного типа). Модель-RFW-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/b93/160_160_1/b93049badbaadf6e0d28decdb6b59205.jpeg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Мойка фрикционная (роторного типа). Модель-RFW-500</h3>
+          <div v-for="prod in mojkafrikсrfw500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>       
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ summojkafrikсrfw500 }}р.</span></div> 
+      </div>  
+      <div class="addequip" @click="addmojka" v-show="!mojkaadded">+ Добавить ещё одну мойку</div>
+  </div>
+
+<div v-if="mojkaadded">  
+  <div id="slidecheckblock" v-for="prod in mojkafrikсrfw500_2"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw5002(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Мойка фрикционная (роторного типа) (2). Модель-RFW-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/b93/160_160_1/b93049badbaadf6e0d28decdb6b59205.jpeg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Мойка фрикционная (роторного типа). Модель-RFW-500</h3>
+          <div v-for="prod in mojkafrikсrfw500_2opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw5002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>       
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ summojkafrikсrfw5002 }}р.</span></div> 
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in mojkafrikсrfw1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw1000(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Мойка фрикционная (роторного типа). Модель-RFW-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/b93/160_160_1/b93049badbaadf6e0d28decdb6b59205.jpeg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Мойка фрикционная (роторного типа). Модель-RFW-1000</h3>
+          <div v-for="prod in mojkafrikсrfw1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkafrikсrfw1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>     
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ summojkafrikсrfw1000 }}р.</span></div> 
+      </div>  
+  </div>
+
+<div id="slidecheckblock" v-for="prod in otgimfrikсvert"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсvert(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжим фрикционный (вертикальный)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/405/160_160_1/405712fc0ad051c24a9de1eb6338d744.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Отжим фрикционный (вертикальный)</h3>
+          <div v-for="prod in otgimfrikсvertopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotgimfrikсvertopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotgimfrikсvert }}р.</span></div>      
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in ustzamach"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedustzamach(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Установка замачивания')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/fc2/160_160_1/fc27de28c1875f3bf35f58e64d75f469.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Установка замачивания</h3>
+          <div v-for="prod in ustzamachopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedustzamachopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumustzamach }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in mojkaunivers"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkaunivers(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Мойка универсальная с автономной системой очистки воды')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/9c6/160_160_1/9c63df4eb4e3e8c795711c74dcad0269.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Мойка универсальная с автономной системой очистки воды</h3>
+          <div v-for="prod in mojkauniversopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedmojkauniversopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>   
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ summojkaunivers }}р.</span></div>  
+      </div>  
+  </div>
+      </div>
+
   </div> 
   </div>
 </div>
