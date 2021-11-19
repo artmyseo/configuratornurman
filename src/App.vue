@@ -561,6 +561,259 @@
       </div> 
     </div>
   </div>
+       <div class="tab-pane" :class="[{ 'active show': isActive('ochist-cat') }, { 'active show': isActive('all-cat') }]" id="ochist-cat">
+        <h3 class="titlecategory">Оборудование для обработки (очистки)</h3>
+<div id="slidecheckblock" v-for="prod in grohotsmall"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotsmall(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Грохот моющий (малый)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/abf/160_160_1/abfeeadc7f14cfa70d7ca51999fa4e16.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Грохот моющий (малый)</h3>
+          <div v-for="prod in grohotsmallopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotsmallopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumgrohotsmall }}р.</span></div>
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in grohotbig"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotbig(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Грохот моющий (большой)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/09b/160_160_1/09b76f5b1bd7c5ceed6ae6653e5b9f0a.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Грохот моющий (большой)</h3>
+          <div v-for="prod in grohotbigopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotbigopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumgrohotbig }}р.</span></div>  
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in grohotnurman"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotnurman(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Грохот моющий. Серия NURMAN')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/abf/160_160_1/abfeeadc7f14cfa70d7ca51999fa4e16.png"></div>
+          <div>
+        <h3>Грохот моющий. Серия NURMAN</h3>
+          <div v-for="prod in grohotnurmanopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedgrohotnurmanopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumgrohotnurman }}р.</span></div> 
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in otdiretiket500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiket500(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Устройство отдирания этикетки. Модель LR-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/iblock/483/483e943ac6e4961e4f558a03b8623293.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Устройство отдирания этикетки. Модель LR-500</h3>
+          <div v-for="prod in otdiretiket500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiket500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotdiretiket500 }}р.</span></div> 
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in otdiretiket1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiket1000(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Устройство отдирания этикетки. Модель LR-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/iblock/483/483e943ac6e4961e4f558a03b8623293.png"></div>
+          <div>
+        <h3>Устройство отдирания этикетки. Модель LR-1000</h3>
+          <div v-for="prod in otdiretiket1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiket1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotdiretiket1000 }}р.</span></div> 
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in otdiretiketwash500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiketwash500(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Устройство отдирания этикетки (моющее). Модель LR-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/6c6/160_160_1/6c665934b1c92a1c131d8e7d65ba7725.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Устройство отдирания этикетки (моющее). Модель LR-500</h3>
+          <div v-for="prod in otdiretiketwash500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiketwash500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotdiretiketwash500 }}р.</span></div> 
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in otdiretiketwash1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiketwash1000(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Устройство отдирания этикетки (моющее). Модель LR-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/6c6/160_160_1/6c665934b1c92a1c131d8e7d65ba7725.png"></div>
+          <div>
+        <h3>Устройство отдирания этикетки (моющее). Модель LR-1000</h3>
+          <div v-for="prod in otdiretiketwash1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedotdiretiketwash1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotdiretiketwash1000 }}р.</span></div>   
+      </div>  
+</div>
+
+
+      </div>
   </div> 
   </div>
 </div>
