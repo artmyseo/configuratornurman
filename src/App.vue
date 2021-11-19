@@ -811,9 +811,992 @@
         <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumotdiretiketwash1000 }}р.</span></div>   
       </div>  
 </div>
-
-
       </div>
+
+           <div class="tab-pane" :class="[{ 'active show': isActive('izmelch-cat') }, { 'active show': isActive('all-cat') }]" id="izmelch-cat">
+      <h3 class="titlecategory">Измельчители</h3>
+      
+<div id="slidecheckblock" v-for="prod in drobilkacrl500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl500(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-500')">
+<div class="confelemblock" v-for="prod in drobilkacrl500"
+           :key="prod.name"
+          :class="prod.class">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img :src="prod.img"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-500 </h3>
+          <div v-for="prod in drobilkacrl500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl500 }}р.</span></div> 
+      </div>  
+      <div class="addequip" @click="adddrob500" v-show="!drob500added">+ Добавить ещё один конвейер</div>
+  </div>
+
+<div v-if="drob500added">
+  <div id="slidecheckblock" v-for="prod in drobilkacrl5002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl5002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-500 (2)')">
+<div class="confelemblock" v-for="prod in drobilkacrl5002"
+           :key="prod.name"
+          :class="prod.class">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img :src="prod.img"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-500 (2)</h3>
+          <div v-for="prod in drobilkacrl5002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl5002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl5002 }}р.</span></div> 
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrl600"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl600(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-600')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div>
+        <h3>Дробилка универсальная (моющая). Модель - CRL-600</h3>
+          <div v-for="prod in drobilkacrl600opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl600opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl600 }}р.</span></div>   
+      </div>  
+      <div class="addequip" @click="adddrob600" v-show="!drob600added">+ Добавить ещё один конвейер</div>
+  </div>
+
+<div v-if="drob600added">
+  <div id="slidecheckblock" v-for="prod in drobilkacrl6002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      
+      <input type="checkbox" 
+            class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl6002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-600 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div>
+        <h3>Дробилка универсальная (моющая). Модель - CRL-600 (2)</h3>
+          <div v-for="prod in drobilkacrl6002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl6002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl6002 }}р.</span></div>   
+      </div>  
+  </div>
+</div>
+
+<div id="slidecheckblock" v-for="prod in drobilkacrl700"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl700(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-700')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-700</h3>
+          <div v-for="prod in drobilkacrl700opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl700opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl700 }}р.</span></div> 
+      </div>  
+      <div class="addequip" @click="adddrob700" v-show="!drob700added">+ Добавить ещё одну дробилку</div>
+  </div>
+
+<div v-if="drob700added">
+  <div id="slidecheckblock" v-for="prod in drobilkacrl7002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl7002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-700 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-700 (2)</h3>
+          <div v-for="prod in drobilkacrl7002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl7002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl7002 }}р.</span></div> 
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrl800"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl800(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-800')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-800</h3>
+          <div v-for="prod in drobilkacrl800opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl800opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl800 }}р.</span></div>   
+      </div>  
+      <div class="addequip" @click="adddrob800" v-show="!drob800added">+ Добавить ещё одну дробилку</div>
+  </div>
+
+<div v-if="drob800added">  
+  <div id="slidecheckblock" v-for="prod in drobilkacrl8002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl8002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-800 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-800 (2)</h3>
+          <div v-for="prod in drobilkacrl8002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl8002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl8002 }}р.</span></div>   
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrl900"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl900(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-900')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-900</h3>
+          <div v-for="prod in drobilkacrl900opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl900opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl900 }}р.</span></div>   
+      </div>  
+      <div class="addequip" @click="adddrob900" v-show="!drob900added">+ Добавить ещё одну дробилку</div>
+  </div>
+
+<div v-if="drob900added">  
+  <div id="slidecheckblock" v-for="prod in drobilkacrl9002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl9002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-900 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-900 (2)</h3>
+          <div v-for="prod in drobilkacrl9002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl9002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl9002 }}р.</span></div>   
+      </div>  
+  </div>
+</div>  
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrl1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl1000(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-1000</h3>
+          <div v-for="prod in drobilkacrl1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl1000 }}р.</span></div>    
+      </div>  
+      <div class="addequip" @click="adddrob1000" v-show="!drob1000added">+ Добавить ещё одну дробилку</div>
+  </div>
+
+
+<div v-if="drob1000added">  
+  <div id="slidecheckblock" v-for="prod in drobilkacrl10002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl10002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-1000 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-1000</h3>
+          <div v-for="prod in drobilkacrl10002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl10002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl10002 }}р.</span></div>    
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrl1100"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl1100(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-1100')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-1100</h3>
+          <div v-for="prod in drobilkacrl1100opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl1100opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl1100 }}р.</span></div> 
+      </div>  
+      <div class="addequip" @click="adddrob1100" v-show="!drob1100added">+ Добавить ещё одну дробилку</div>
+  </div>
+
+<div v-if="drob1100added">  
+  <div id="slidecheckblock" v-for="prod in drobilkacrl11002"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl11002(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная (моющая). Модель - CRL-1100 (2)')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a0d/160_160_1/a0d5359c335cd888248f2516f99d40a0.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная (моющая). Модель - CRL-1100 (2)</h3>
+          <div v-for="prod in drobilkacrl11002opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrl11002opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrl11002 }}р.</span></div> 
+      </div>  
+  </div>
+</div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrh30"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh30(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRH-30')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRH-30</h3>
+          <div v-for="prod in drobilkacrh30opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh30opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>        
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh30 }}р.</span></div>  
+      </div>  
+  </div>
+
+
+<div id="slidecheckblock" v-for="prod in drobilkacrh37"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh37(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRH-37')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRH-37</h3>
+          <div v-for="prod in drobilkacrh37opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh37opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>   
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh37 }}р.</span></div>  
+      </div>  
+  </div>
+
+
+      
+  <div id="slidecheckblock" v-for="prod in drobilkacrh45"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh45(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRH-45')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRH-45</h3>
+          <div v-for="prod in drobilkacrh45opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh45opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>   
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh45 }}р.</span></div>  
+      </div>  
+  </div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrh55"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh55(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRH-55')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRH-55</h3>
+          <div v-for="prod in drobilkacrh55opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh55opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>     
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh55 }}р.</span></div>  
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrh75"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh75(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRH-75')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRH-75</h3>
+          <div v-for="prod in drobilkacrh75opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh75opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh75 }}р.</span></div>     
+      </div>  
+  </div>
+
+  <div id="slidecheckblock" v-for="prod in drobilkacrsh160"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh160(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Дробилка универсальная тяжелая (моющая). Модель - CRSH-160')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/847/160_160_1/847db1f7f4d0eab136cecd1d6d670447.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Дробилка универсальная тяжелая (моющая). Модель - CRSH-160</h3>
+          <div v-for="prod in drobilkacrsh160opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selecteddrobilkacrh160(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumdrobilkacrh160 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in shredoss2260"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredoss2260(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Однороторный шредер». Модель - OSS-2260-300')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/217/160_160_1/217c733ba1315af6e1c45e659f67f5d7.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Однороторный шредер». Модель - OSS-2260-300</h3>
+          <div v-for="prod in shredoss2260opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredoss2260opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredoss2260 }}р.</span></div> 
+      </div>  
+  </div>
+
+  <div id="slidecheckblock" v-for="prod in shredoss3080"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredoss3080(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Однороторный шредер». Модель - OSS-3080-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/217/160_160_1/217c733ba1315af6e1c45e659f67f5d7.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Однороторный шредер». Модель - OSS-3080-500</h3>
+          <div v-for="prod in shredoss3080opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredoss3080opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredoss3080 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in shredtsfs2260"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs2260(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-2260')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/3ba/160_160_1/3ba0a681f1de33f71fafea7ab8f6be52.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-2260</h3>
+          <div v-for="prod in shredtsfs2260opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs2260opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredtsfs2260 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in shredtsfs3080"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs3080(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-3080')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/3ba/160_160_1/3ba0a681f1de33f71fafea7ab8f6be52.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-3080</h3>
+          <div v-for="prod in shredtsfs3080opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs3080opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredtsfs3080 }}р.</span></div> 
+      </div>  
+  </div>
+
+  <div id="slidecheckblock" v-for="prod in shredtsfs40100"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs40100(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-40100')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/3ba/160_160_1/3ba0a681f1de33f71fafea7ab8f6be52.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Двухроторный шредер». Модель - TSFS-40100</h3>
+          <div v-for="prod in shredtsfs40100opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredtsfs40100opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredtsfs40100 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in shredfss8040"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8040(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8040')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4c3/160_160_1/4c3af84c47b5855ed9830c82be9e1455.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8040</h3>
+          <div v-for="prod in shredfss8040opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8040opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredfss8040 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  
+  <div id="slidecheckblock" v-for="prod in shredfss8060"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8060(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8060')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4c3/160_160_1/4c3af84c47b5855ed9830c82be9e1455.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8060</h3>
+          <div v-for="prod in shredfss8060opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8060opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredfss8060 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+    
+  <div id="slidecheckblock" v-for="prod in shredfss8080"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8080(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8080')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4c3/160_160_1/4c3af84c47b5855ed9830c82be9e1455.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-8080</h3>
+          <div v-for="prod in shredfss8080opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss8080opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredfss8080 }}р.</span></div> 
+      </div>  
+  </div>
+
+
+  <div id="slidecheckblock" v-for="prod in shredfss80100"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss80100(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-80100')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4c3/160_160_1/4c3af84c47b5855ed9830c82be9e1455.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Измельчитель роторный (низкоскоростной) «Четырёхроторный шредер». Модель - FFS-80100</h3>
+          <div v-for="prod in shredfss80100opt"
+           :class="prod.name" 
+           :key="prod.name">
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedshredfss80100opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>      
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumshredfss80100 }}р.</span></div> 
+      </div>  
+  </div>
+      </div>
+
+      
   </div> 
   </div>
 </div>
