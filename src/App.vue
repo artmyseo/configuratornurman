@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png"> {{sumprototal}} 
-
-    {{selectedProds}}
+        <img alt="Vue logo" src="./assets/logo.png"> 
+    <b-container>
+      <b-row>
+    <b-col cols="8">
 <div id="equiplist">
     <div class="tab-content py-3" id="myTabContent" :class="[{ 'kpformat': isActive('all-cat') }]">
       <div class="tab-pane" :class="[{ 'active show': isActive('sortcat') }, { 'active show': isActive('all-cat') }]" id="sortcat">
@@ -2178,10 +2179,862 @@
         <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ summojkaunivers }}р.</span></div>  
       </div>  
   </div>
-      </div>
+</div>
 
+     <div class="tab-pane" :class="[{ 'active show': isActive('flot-cat') }, { 'active show': isActive('all-cat') }]" id="flot-cat">
+        <h3 class="titlecategory">Флотационное оборудование</h3>
+      
+      
+<div id="slidecheckblock" v-for="prod in flottonkompakt"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonkompakt(prod)"> <label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для тонущих полимеров. Модель FL-Pet-500 Компактная')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/20f/160_160_1/20f4b7e3b3b717a0c725461903154baf.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для тонущих полимеров. Модель FL-Pet-500 Компактная</h3>
+          <div v-for="prod in flottonkompaktopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonkompaktopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>       
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflottonkompakt }}р.</span></div>  
+      </div>  
+  </div>
+
+<div id="slidecheckblock" v-for="prod in flottonpet500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonpet500(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для тонущих полимеров. Модель FL-Pet-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/0cd/160_160_1/0cda2064ded7c6ec02cfd3be31c269f8.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для тонущих полимеров. Модель FL-Pet-500</h3>
+          <div v-for="prod in flottonpet500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonpet500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflottonpet500 }}р.</span></div>  
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in flottonpet1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonpet1000(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для тонущих полимеров. Модель FL-Pet-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/0cd/160_160_1/0cda2064ded7c6ec02cfd3be31c269f8.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для тонущих полимеров. Модель FL-Pet-1000</h3>
+          <div v-for="prod in flottonpet1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflottonpet1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflottonpet1000 }}р.</span></div> 
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in flotplav500kompakt"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav500kompakt(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для плавающих полимеров. Модель FL-PE/PP-500 Компактная')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/417/160_160_1/417c630647404f30837d5b31eebc0c2c.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для плавающих полимеров. Модель FL-PE/PP-500 Компактная</h3>
+          <div v-for="prod in flotplav500kompaktopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav500kompaktopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflotplav500kompakt }}р.</span></div>  
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in flotplav1000kompakt"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav1000kompakt(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для плавающих полимеров. Модель FL-PE/PP-1000 Компактная')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/417/160_160_1/417c630647404f30837d5b31eebc0c2c.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для плавающих полимеров. Модель FL-PE/PP-1000 Компактная</h3>
+          <div v-for="prod in flotplav1000kompaktopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav1000kompaktopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflotplav1000kompakt }}р.</span></div> 
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in flotplav500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav500(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для плавающих полимеров. Модель FL-PE/PP-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a88/160_160_1/a88a419fdca5dacf010d6d3f9fe99a54.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для плавающих полимеров. Модель FL-PE/PP-500</h3>
+          <div v-for="prod in flotplav500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflotplav500 }}р.</span></div>  
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in flotplav1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav1000(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для плавающих полимеров. Модель FL-PE/PP-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a88/160_160_1/a88a419fdca5dacf010d6d3f9fe99a54.png"></div>
+          <div class="block-equip-line-desc">
+        <h3>Ванна флотации для плавающих полимеров. Модель FL-PE/PP-1000</h3>
+          <div v-for="prod in flotplav1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplav1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflotplav1000 }}р.</span></div>   
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in flotplavnurman"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplavnurman(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Ванна флотации для плавающих полимеров. Серия NURMAN')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/a88/160_160_1/a88a419fdca5dacf010d6d3f9fe99a54.png"></div>
+          <div>
+        <h3>Ванна флотации для плавающих полимеров. Серия NURMAN</h3>
+          <div v-for="prod in flotplavnurmanopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedflotplavnurmanopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div> 
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumflotplavnurman }}р.</span></div>  
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in ustflotton"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedustflotton(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Установка флотирования для тонущих полимеров')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/7da/160_160_1/7da68c6a5cb38153f6644f592a317f35.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Установка флотирования для тонущих полимеров</h3>
+          <div v-for="prod in ustflottonopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedustflottonopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumustflotton }}р.</span></div>   
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in washflotplav"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedwashflotplav(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Моющая флотационная машина для плавающих материалов')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/134/160_160_1/13469175b946b08707666a33ef6a798d.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Моющая флотационная машина для плавающих материалов</h3>
+          <div v-for="prod in washflotplavopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedwashflotplavopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumwashflotplav }}р.</span></div>   
+      </div>  
+  </div>     
+</div>
+     <div class="tab-pane" :class="[{ 'active show': isActive('sush-cat') }, { 'active show': isActive('all-cat') }]" id="sush-cat">
+        <h3 class="titlecategory">Сушильное оборудование</h3>
+
+<div id="slidecheckblock" v-for="prod in sushkatt500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkatt500(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Сушка для твёрдых пластмасс. Модель С-ТТ-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/1a2/160_160_1/1a25930656378db359e9ea8078cdd12b.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Сушка для твёрдых пластмасс. Модель С-ТТ-500</h3>
+          <div v-for="prod in sushkatt500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkatt500opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumsushkatt500 }}р.</span></div> 
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in sushkatt1000"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkatt1000(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Сушка для твёрдых пластмасс. Модель С-ТТ-1000')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/1a2/160_160_1/1a25930656378db359e9ea8078cdd12b.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Сушка для твёрдых пластмасс. Модель С-ТТ-1000</h3>
+          <div v-for="prod in sushkatt1000opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkatt1000opt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>  
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumsushkatt1000 }}р.</span></div>   
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in sushkaplen"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkaplen(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Сушка для пленок')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/2fc/160_160_1/2fc5f9227d26251a3aaf24bec0511992.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Сушка для пленок</h3>
+          <div v-for="prod in sushkaplenopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selectedsushkaplenopt(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>    
+          </div>
+        </div>
+        <div class="block-kp-line-sumprice">Стоимость с опциями: <span class="sumprice">{{ sumsushkaplen }}р.</span></div> 
+      </div>  
+</div>
+</div>
+
+     <div class="tab-pane" :class="[{ 'active show': isActive('aglomerat-cat') }, { 'active show': isActive('all-cat') }]" id="aglomerat-cat">
+        <h3 class="titlecategory">Оборудование для повышения насыпной плотности</h3>
+
+  <div id="slidecheckblock" v-for="prod in pa22"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Пресс агломератор. Модель ПА-22')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/ad8/160_160_1/ad80d1c2480113ab1855a0433a9e0efc.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Пресс агломератор. Модель ПА-22</h3>
+          <div v-for="prod in pa22opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in pa30"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Пресс агломератор. Модель ПА-30')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/ad8/160_160_1/ad80d1c2480113ab1855a0433a9e0efc.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Пресс агломератор. Модель ПА-30</h3>
+          <div v-for="prod in pa30opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in pa37"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Пресс агломератор. Модель ПА-37')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/ad8/160_160_1/ad80d1c2480113ab1855a0433a9e0efc.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Пресс агломератор. Модель ПА-37</h3>
+          <div v-for="prod in pa37opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in opa300"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжимной пресс-агломератор. Модель ОПА-300')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/c8d/160_160_1/c8d5ee31b6992d14592ef9baa733cafa.jpg"></div>
+          <div>
+        <h3>Отжимной пресс-агломератор. Модель ОПА-300</h3>
+          <div v-for="prod in opa300opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in opa500"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Отжимной пресс-агломератор. Модель ОПА-500')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/c8d/160_160_1/c8d5ee31b6992d14592ef9baa733cafa.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Отжимной пресс-агломератор. Модель ОПА-500</h3>
+          <div v-for="prod in opa500opt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="optionclass"> {{prod.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+      </div>
+      <div class="tab-pane" :class="[{ 'active show': isActive('othet-cat') }, { 'active show': isActive('all-cat') }]" id="othet-cat">
+        <h3 class="titlecategory">Вспомогательное оборудование</h3>
+
+<div id="slidecheckblock" v-for="prod in zatochstan"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Заточной станок')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/bd8/160_160_1/bd81c198ba2a44ff032de9deadf7e13b.jpg"></div>
+          <div class="block-equip-line-desc">
+        <h3>Заточной станок</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in sortoptical"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Установка оптической сортировки измельченного материала')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/acc/160_160_1/acc8689e285e8020438c28592b12bd12.jpg"></div>
+          <div>
+        <h3>Установка оптической сортировки измельченного материала</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+      </div>
+      <div class="tab-pane" :class="[{ 'active show': isActive('system-water-cat') }, { 'active show': isActive('all-cat') }]" id="system-water-cat">
+        <h3 class="titlecategory">Системы очистки воды</h3>
+
+<div id="slidecheckblock" v-for="prod in systemfreshwater25"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Система очистки воды централизованная. Вариант произодительностью 2,5 м3/час')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4cc/160_160_1/4ccd145e7268b84af6d6f68a02366005.png"></div>
+          <div>
+        <h3>Система очистки воды централизованная. Вариант произодительностью 2,5 м3/час</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in systemfreshwater5"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Система очистки воды централизованная. Вариант произодительностью 5 м3/час')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4cc/160_160_1/4ccd145e7268b84af6d6f68a02366005.png"></div>
+          <div>
+        <h3>Система очистки воды централизованная. Вариант произодительностью 5 м3/час</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+
+<div id="slidecheckblock" v-for="prod in systemfreshwater10"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Система очистки воды централизованная. Вариант произодительностью 10 м3/час')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4cc/160_160_1/4ccd145e7268b84af6d6f68a02366005.png"></div>
+          <div>
+        <h3>Система очистки воды централизованная. Вариант произодительностью 10 м3/час</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+
+
+<div id="slidecheckblock" v-for="prod in systemfreshwater15"
+           :key="prod.name"
+          :class="prod.class"
+          >
+      <input type="checkbox" 
+             class="slide-checkbox"
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"><label :for="prod.name" class="checkbox">{{prod.name}}</label>
+    </div>
+<div class="confmainequipblock" v-if="nameOnly.includes('Система очистки воды централизованная. Вариант произодительностью 15 м3/час')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-equip-line-img"><img src="https://nur-man.ru/upload/resize_cache/iblock/4cc/160_160_1/4ccd145e7268b84af6d6f68a02366005.png"></div>
+          <div>
+        <h3>Система очистки воды централизованная. Вариант произодительностью 15 м3/час</h3>
+         
+          </div>
+        </div>
+      </div>  
+</div>
+
+      
+      </div>
+      <div class="tab-pane" :class="{ 'active show': isActive('line-granul-cat') }" id="line-granul-cat">
+       <h3 class="titlecategory">Линии грануляции</h3>
+       <div class="confmainequipblock" v-if="nameOnly.includes('Перегрузчик шнековый')">
+<div class="confelemblock">
+        <div class="block-equip-line">
+        <div class="block-kp-line-img"><img src="http://nur-man.ru/upload/resize_cache/iblock/c13/160_160_1/c13eba24bd0d07602c9665fbd995c714.jpg"></div>
+        <div>
+        <h4>Перегрузчик шнековый</h4>
+          <div v-for="prod in peregruzshnekopt"
+           :class="prod.name" 
+           :key="prod.name">
+      
+      <input type="checkbox" 
+             name="products[]" 
+             :id="prod.name" 
+             :value="prod.price" 
+             @change="selected(prod)"> {{prod.name}}{{prod.price}}
+        </div>
+        </div> 
+        <div class="block-kp-line-price">
+        <div v-for="prod in peregruzshnek"
+           :key="prod.name">
+           <h4>{{prod.price}}р.</h4>
+        </div>
+        </div>
+        </div>
+      </div>  
+  </div>
+</div>
   </div> 
   </div>
+  </b-col>
+  <b-col>
+  <div id="right-block" :class="[{ 'kppanel-rightblock': isActive('kp-conf') }, { 'kppanel-rightblock': isActive('kp-name') }, { 'kppanel-rightblock': isActive('pdftab') }]">
+  
+
+<div class="totalpriceblock"><p>Цена оборудования (линии):</p> <h4>{{ sumprototal }} <i class="fas fa-ruble-sign"></i></h4>
+<a @click.prevent="setActive('kp-conf')" :class="{ active: isActive('kp-conf') }" href="#kp-conf">
+  <div class="totalpriceblock_info">
+  <i class="fas fa-file-invoice-dollar"></i> </div>
+  <div class="totalpriceblock_link">Сконфигурировать линию</div>
+</a>
+</div>
+
+  <div class="dopelemblock">
+    
+    <h3>Категории</h3>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('sortcat')" :class="{ active: isActive('sortcat') }" href="#sortcat'">Оборудование для сортировки</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('ochist-cat')" :class="{ active: isActive('ochist-cat') }" href="#ochist-cat">Оборудование для обработки (очистки)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('izmelch-cat')" :class="{ active: isActive('izmelch-cat') }" href="#izmelch-cat">Измельчители</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('mojki-cat')" :class="{ active: isActive('mojki-cat') }" href="#mojki-cat">Моечное оборудование</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('flot-cat')" :class="{ active: isActive('flot-cat') }" href="#flot-cat">Флотационное оборудование</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('sush-cat')" :class="{ active: isActive('sush-cat') }" href="#sush-cat">Сушильное оборудование</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('aglomerat-cat')" :class="{ active: isActive('aglomerat-cat') }" href="#aglomerat-cat">Оборудование для повышения насыпной плотности</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('othet-cat')" :class="{ active: isActive('othet-cat') }" href="#othet-cat">Вспомогательное оборудование</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('system-water-cat')" :class="{ active: isActive('system-water-cat') }" href="#system-water-cat">Системы очистки воды</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" @click.prevent="setActive('line-granul-cat')" :class="{ active: isActive('line-granul-cat') }" href="#line-granul-cat">Линии грануляции</a>
+      </li>
+    </ul>
+
+   <br> 
+
+     </div>
+
+<!--
+    <hr> 
+    <pre>{{ selectedProds }}</pre>
+    
+    <hr>
+    <pre>{{ nameOnly }}</pre>
+
+    <hr>
+    <pre>{{ dopProds }}</pre>
+-->
+    
+ 
+      </div>
+   
+    </b-col>
+    </b-row>
+  </b-container>
 </div>
 
 </template>
@@ -5753,13 +6606,21 @@ selectedkonv3opt(prod) {
 </script>
 
 <style>
+body{
+  background: #f2f2f7;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 15px auto 0;
+  padding: 15px 25px;
+  max-width: 1120px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 32px rgb(0 0 0 / 8%);
 }
 
 .totalpriceblock{
