@@ -1,6 +1,15 @@
 <template>
   <div id="app">
+      <div class="header_app">
         <img alt="Vue logo" src="./assets/logo.png"> 
+        <div class="totalpriceblock"><p>Цена оборудования (линии):</p> <h4>{{ sumprototal }} р.<i class="fas fa-ruble-sign"></i></h4>
+          <a @click.prevent="setActive('kp-conf')" :class="{ active: isActive('kp-conf') }" href="#kp-conf">
+          <div class="totalpriceblock_info">
+          <i class="fas fa-file-invoice-dollar"></i> </div>
+          <div class="totalpriceblock_link">Сконфигурировать линию</div>
+          </a>
+        </div>
+      </div>  
     <b-container>
       <b-row>
     <b-col cols="8">
@@ -2970,13 +2979,7 @@
   <div id="right-block" :class="[{ 'kppanel-rightblock': isActive('kp-conf') }, { 'kppanel-rightblock': isActive('kp-name') }, { 'kppanel-rightblock': isActive('pdftab') }]">
   
 
-<div class="totalpriceblock"><p>Цена оборудования (линии):</p> <h4>{{ sumprototal }} <i class="fas fa-ruble-sign"></i></h4>
-<a @click.prevent="setActive('kp-conf')" :class="{ active: isActive('kp-conf') }" href="#kp-conf">
-  <div class="totalpriceblock_info">
-  <i class="fas fa-file-invoice-dollar"></i> </div>
-  <div class="totalpriceblock_link">Сконфигурировать линию</div>
-</a>
-</div>
+
 
   <div class="dopelemblock">
     
@@ -6618,15 +6621,18 @@ body{
   margin: 15px auto 0;
   padding: 15px 25px;
   max-width: 1120px;
-  background: #fff;
+  /*background: #fff;
   border-radius: 15px;
-  box-shadow: 0 0 32px rgb(0 0 0 / 8%);
+  box-shadow: 0 0 32px rgb(0 0 0 / 8%);*/
+}
+
+.header_app {
+  display: flex;
+  justify-content: space-between;
 }
 
 .totalpriceblock{
-   position: sticky;
-   top: 70px;
-    width: 100%;
+    width: 332px;
     height: 100px;
     background-color: #f6f6f6;
     border: 1px solid #F7761F;
@@ -6672,12 +6678,10 @@ color: #f7761f;
 }
 
 .dopelemblock{
-   position: sticky;
-   top: 185px;
     background-color: #f6f6f6;
     padding: 5px 10px 25px;
     width: 100%;
-    margin: 15px 0;
+    margin: 25px 0;
     box-shadow: 0 4px 30px rgba(50,50,66,.30);
     border-radius: 4px;
 z-index:99;
